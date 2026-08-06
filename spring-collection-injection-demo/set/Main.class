@@ -1,0 +1,18 @@
+package set;
+
+import java.util.Set;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new AnnotationConfigApplicationContext(Config.class);
+
+		Hospital h1 = (Hospital) context.getBean("h");
+
+		System.out.println(h1);
+	}
+
+}
